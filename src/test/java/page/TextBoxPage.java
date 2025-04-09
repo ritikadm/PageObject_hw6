@@ -47,3 +47,4 @@ public class TextBoxPage {
         output.shouldHave(text(value));
         return this;
     }
+}

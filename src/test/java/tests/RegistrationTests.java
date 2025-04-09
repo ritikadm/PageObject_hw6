@@ -28,7 +28,7 @@ public class RegistrationTests extends TestBase {
                 setCurrentAddress("Korolev").
                 setState("NCR").
                 setCity("Noida").
-                clickSubmit()();
+                clickSubmit();
 
         resultTable.checkResult("Student Name", "Margarita Solopova").
                 checkResult("Student Email", "Solopova@gmail.com").
@@ -39,7 +39,7 @@ public class RegistrationTests extends TestBase {
                 checkResult("Hobbies", "Sports").
                 checkResult("Picture", "picture.jpg").
                 checkResult("Address", "Korolev").
-                checkResult("State and City", "NCR" + " " + "Noida")
+                checkResult("State and City", "NCR" + " " + "Noida");
 
     }
         @Test

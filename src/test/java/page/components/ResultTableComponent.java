@@ -12,4 +12,5 @@ public class ResultTableComponent {
     public ResultTableComponent checkResult(String key, String value) {
         table.$(byText(key)).parent().shouldHave(text(value));
         return this;
+    }
 }
