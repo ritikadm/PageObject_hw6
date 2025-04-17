@@ -5,8 +5,10 @@ import page.components.CalendarComponent;
 import page.components.ResultTableComponent;
 
 import static com.codeborne.selenide.Condition.cssValue;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
+import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class RegistrationPage {
     private SelenideElement firstNameInput = $("#firstName"),
@@ -14,9 +16,9 @@ public class RegistrationPage {
             userEmailInput = $("#userEmail"),
             genderWrapper = $("#gender-radio-2+label"),
             userNumberInput = $("#userNumber"),
-            calendarInput = $("#date0fBirthInputr"),
+            calendarInput = $("#dateOfBirthInput"),
             subjectInput = $("#subjectsInput"),
-            hobbiesCheckbox = $("#hobbies-checkbox-1+label"),
+            hobbiesCheckbox = $("#hobbies-checkbox-1 + label"),
             uploadPicture = $("#uploadPicture"),
             currentAddress = $("#currentAddress"),
             state = $("#react-select-3-input"),
@@ -69,7 +71,7 @@ public class RegistrationPage {
 
     public RegistrationPage setSubjectsInput(String value) {
 
-        subjectInput.setValue("value").pressEnter();
+        subjectInput.setValue(value).pressEnter();
         return this;
     }
 
@@ -84,7 +86,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setCurrentAddress(String value) {
-        currentAddress.setValue("value");
+        currentAddress.setValue(value);
         return this;
     }
 
